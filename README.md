@@ -1,0 +1,2 @@
+# mybatisgenerator
+mybatisgenerator_sample
