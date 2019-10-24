@@ -18,7 +18,7 @@ generatorConfig.xml
 
 	<context id="generatortables" targetRuntime="MyBatis3">
 
-    	<!-- generator plugins -->
+		<!-- generator plugins -->
 		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
 
