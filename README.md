@@ -17,21 +17,22 @@ generatorConfig.xml
 		location="targetprojectpath\src\main\resources\mariadb-java-client-2.4.0-sources.jar" />
 
 	<context id="generatortables" targetRuntime="MyBatis3">
-    <!-- generator plugins -->
+
+    	<!-- generator plugins -->
 		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
 
-    <!-- delete default comment -->
+		<!-- delete default comment -->
 		<commentGenerator>
 		  <property name="suppressAllComments" value="true" />
 		</commentGenerator>
 
-    <!-- database connection config -->
+		<!-- database connection config -->
 		<jdbcConnection driverClass="org.mariadb.jdbc.Driver"
 			connectionURL="jdbc:mariadb://localhost:3306/dev" userId="dev" password="asdf1234">
 		</jdbcConnection>
 
-    <!-- database models -->
+		<!-- database models -->
 		<javaModelGenerator
 			targetPackage="org.lionpooh.model"
 			targetProject="targetprojectpath\src\main\java">
@@ -39,14 +40,14 @@ generatorConfig.xml
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
-    <!-- mapper interface -->
+		<!-- mapper interface -->
 		<sqlMapGenerator
 			targetPackage="org.lionpooh.mapper"
 			targetProject="targetprojectpath\src\main\resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
-    <!-- mapper xml -->
+		<!-- mapper xml -->
 		<javaClientGenerator type="XMLMAPPER"
 			targetPackage="com.skb.cloudpc.platform.mapper"
 			targetProject="targetprojectpath\src\main\java">
@@ -60,9 +61,8 @@ generatorConfig.xml
 
 	</context>
 </generatorConfiguration>
-
 ```
-### useful plugins
+### plugins
 
 - **row plugin**  
 set returned list with limited in lenght, and a start porsition can be specified
